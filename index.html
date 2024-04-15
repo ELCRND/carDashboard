@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="root">
+        <header class="header">
+            <form class="header__form">
+                <button class="header__submit">
+                    <img src="public/img/search_btn.svg" alt="">
+                </button>
+                <input class="header__search" type="search">
+            </form>
+            <button class="header__notifications">
+                <img src="public/img/notification.svg" alt="">
+            </button>
+            <img class="header__avatar" src="public/img/avatar.png" alt="avatar">
+        </header>
+
+        <aside class="aside">
+            <div>
+                <img class="aside__logo" src="public/img/logo.svg" alt="logo">
+            </div>
+            <div class="aside__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item dasboard">
+                        <img src="public/img/aside/dashboard_icon.svg" alt="">
+                        <a href="#">Dasboard</a>
+                    </li>
+                    <li class="nav__item assets">
+                        <img src="public/img/aside/assets_icon.svg" alt="">
+                        <a href="#">Assets</a>
+                    </li>
+                    <li class="nav__item booking">
+                        <img src="public/img/aside/booking_icon.svg" alt="">
+                        <a href="#">Booking</a>
+                    </li>
+                    <li class="nav__item sellCars">
+                        <img src="public/img/aside/sell-cars_icon.svg" alt="">
+                        <a href="#">Sell Cars</a>
+                    </li>
+                    <li class="nav__item buyCars">
+                        <img src="public/img/aside/buy-cars_icon.svg" alt="">
+                        <a href="#">Buy Cars</a>
+                    </li>
+                    <li class="nav__item services">
+                        <img src="public/img/aside/services_icon.svg" alt="">
+                        <a href="#">Services</a>
+                    </li>
+                    <li class="nav__item calendar">
+                        <img src="public/img/aside/calendar_icon.svg" alt="">
+                        <a href="#">Calendar</a>
+                    </li>
+                    <li class="nav__item messages">
+                        <img src="public/img/aside/messages_icon.svg" alt="">
+                        <a href="#">Messages</a>
+                    </li>
+                </ul>
+                <a class="aside__settings" href="#">
+                    <img src="public/img/aside/settings_icon.svg" alt="">
+                    <span>
+                        Settings
+                    </span>
+                </a>
+                <a class="aside__logOut" href="#">
+                    <img src="public/img/aside/logOut_icon.svg" alt="">
+                    <span>
+                        Log out
+                    </span>
+                </a>
+            </div>
+        </aside>
+
+        <article class="dashboard">
+            <section class="indicators">
+                <div class="indicators__energy energy">
+                    <img class="energy__icon" src="public/img/dashboard/enegry-icon.svg" alt="energy">
+                    <h2 class="energy__title">Enegry</h2>
+                    <canvas id="energy__scale" width="112" height="112"></canvas>
+                </div>
+                <div class="indicators__range range">
+                    <img class="range__icon" src="public/img/dashboard/range-icon.svg" alt="range">
+                    <h2 class="range__title">Range</h2>
+                    <canvas id="range__scale" width="112" height="112"></canvas>
+                </div>
+                <div class="indicators__breakFluid breakFluid">
+                    <img class="breakFluid__icon" src="public/img/dashboard/break-fluid-icon.svg" alt="breakFluid">
+                    <h2 class="breakFluid__title">Break fluid</h2>
+                    <canvas id="breakFluid__scale" width="112" height="112"></canvas>
+                </div>
+                <div class="indicators__tireWear tireWear">
+                    <img class="tireWear__icon" src="public/img/dashboard/tire-wear-icon.svg" alt="tireWear">
+                    <h2 class="tireWear__title">Tire Wear</h2>
+                    <canvas id="tireWear__scale" width="112" height="112"></canvas>
+                </div>
+            </section>
+
+            <section class="graphics">
+                <div class="graphics__miles milesStatistics">
+                    <h3 class="milesStatistics__title">Miles Statistics</h3>
+                    <div class="milesStatistics__periods periods">
+                        <label class="periods__day">
+                            <input type="radio" name="milesStatistics" id="milesStatistics__day" checked>
+                            <span>Day</span>
+                        </label>
+                        <label class="periods__week">
+                            <input type="radio" name="milesStatistics" id="milesStatistics__week">
+                            <span>Week</span>
+                        </label>
+                        <label class="periods__mounth">
+                            <input type="radio" name="milesStatistics" id="milesStatistics__mounth">
+                            <span>Mounth</span>
+                        </label>
+                    </div>
+                    <canvas id="milesStatistics__graphic"></canvas>
+                </div>
+                <div class="graphics__car carStatistics">
+                    <h3 class="carStatistics__title">Car Statistics</h3>
+                    <div class="carStatistics__periods periods">
+                        <label class="periods__day">
+                            <input type="radio" name="carStatistics" id="carStatistics__day" checked>
+                            <span>Day</span>
+                        </label>
+                        <label class="periods__week">
+                            <input type="radio" name="carStatistics" id="carStatistics__week">
+                            <span>Week</span>
+                        </label>
+                        <label class="periods__mounth">
+                            <input type="radio" name="carStatistics" id="carStatistics__mounth">
+                            <span>Mounth</span>
+                        </label>
+                    </div>
+                    <canvas id="carStatistics__graphic"></canvas>
+                </div>
+            </section>
+
+            <section class="cars">
+                <div class="miniCooper">
+                    <img src="public/img/dashboard/recomended-icon.svg" alt="">
+                    <span class="miniCooper__recommend">64% Recommend</span>
+                    <img src="public/img/dashboard/mini-cooper.png" alt="Mini Cooper">
+                    <h3 class="miniCooper__title">Mini Cooper</h3>
+                    <div class="miniCooper__bottomBar bottomBar">
+                        <img class="bottomBar__icon" src="public/img/dashboard/bottom-bar-icon-1.svg" alt="">
+                        <img class="bottomBar__icon" src="public/img/dashboard/bottom-bar-icon-2.svg" alt="">
+                        <img class="bottomBar__icon" src="public/img/dashboard/bottom-bar-icon-3.svg" alt="">
+                        <img class="bottomBar__icon" src="public/img/dashboard/bottom-bar-icon-4.svg" alt="">
+                        <span class="bottomBar__price">$<b>32</b>/h</span>
+                    </div>
+                </div>
+                <div class="marutiSuzuki">
+                    <img src="public/img/dashboard/recomended-icon.svg" alt="">
+                    <span class="marutiSuzuki__recommend">74% Recommend</span>
+                    <img src="public/img/dashboard/maruti-suzuki.png" alt="Maruti Suzuki">
+                    <h3 class="marutiSuzuki__title">Maruti Suzuki</h3>
+                    <div class="marutiSuzuki__bottomBar bottomBar">
+                        <img class="bottomBar__icon" src="public/img/dashboard/bottom-bar-icon-1.svg" alt="">
+                        <img class="bottomBar__icon" src="public/img/dashboard/bottom-bar-icon-2.svg" alt="">
+                        <img class="bottomBar__icon" src="public/img/dashboard/bottom-bar-icon-3.svg" alt="">
+                        <img class="bottomBar__icon" src="public/img/dashboard/bottom-bar-icon-4.svg" alt="">
+                        <span class="bottomBar__price">$<b>28</b>/h</span>
+                    </div>
+                </div>
+                <div class="suzukiSwift">
+                    <img src="public/img/dashboard/recomended-icon.svg" alt="">
+                    <span class="suzukiSwift__recommend">74% Recommend</span>
+                    <img src="public/img/dashboard/suzuki-swift.png" alt="suzukiSwift">
+                    <h3 class="suzukiSwift__title">Suzuki Swift</h3>
+                    <div class="suzukiSwift__bottomBar bottomBar">
+                        <img class="bottomBar__icon" src="public/img/dashboard/bottom-bar-icon-1.svg" alt="">
+                        <img class="bottomBar__icon" src="public/img/dashboard/bottom-bar-icon-2.svg" alt="">
+                        <img class="bottomBar__icon" src="public/img/dashboard/bottom-bar-icon-3.svg" alt="">
+                        <img class="bottomBar__icon" src="public/img/dashboard/bottom-bar-icon-4.svg" alt="">
+                        <span class="bottomBar__price">$<b>28</b>/h</span>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

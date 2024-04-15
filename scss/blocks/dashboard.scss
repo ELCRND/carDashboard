@@ -1,0 +1,144 @@
+.dashboard {
+  padding: 30px;
+  background-color: #f5f5f5;
+  .indicators {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+    place-items: center;
+    .energy,
+    .range,
+    .breakFluid,
+    .tireWear {
+      width: 232px;
+
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 14px;
+      background-color: #fff;
+      .energy__title,
+      .range__title,
+      .breakFluid__title,
+      .tireWear__title {
+        text-wrap: nowrap;
+        @extend %h1;
+      }
+      .energy__title {
+        color: #fff;
+      }
+      .energy__icon {
+        padding: 9px 12px;
+        border-radius: 50%;
+        background-color: rgb(166, 111, 240);
+      }
+      .range__icon {
+        padding: 9px 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 126, 134, 0.1);
+      }
+      .breakFluid__icon {
+        padding: 9px 12px;
+        border-radius: 50%;
+        background-color: rgba(161, 98, 247, 0.1);
+      }
+      .tireWear__icon {
+        padding: 9px 12px;
+        border-radius: 50%;
+        background-color: rgba(246, 204, 13, 0.1);
+      }
+    }
+    .energy {
+      background-color: $purple;
+    }
+  }
+  .graphics {
+    margin-top: 23px;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(488px, 1fr));
+    place-items: center;
+    .milesStatistics,
+    .carStatistics {
+      width: 488px;
+      padding: 15px 25px;
+      border-radius: 14px;
+      background-color: #fff;
+    }
+    .milesStatistics__title,
+    .carStatistics__title {
+      @extend %h3;
+    }
+  }
+  .cars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(318px, 1fr));
+    place-items: center;
+    gap: 30px;
+    .miniCooper,
+    .marutiSuzuki,
+    .suzukiSwift {
+      padding: 15px 28px;
+      border-radius: 14px;
+      span {
+        margin-left: 14px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21px;
+      }
+      .bottomBar {
+        display: flex;
+        gap: 18px;
+        .bottomBar__price {
+          margin-left: auto;
+        }
+      }
+    }
+    .miniCooper__title,
+    .marutiSuzuki__title,
+    .suzukiSwift__title {
+      @extend %h3;
+    }
+    .miniCooper {
+      background-color: #e1dfa4;
+    }
+    .marutiSuzuki {
+      background-color: #e3ecf1;
+    }
+    .suzukiSwift {
+      background-color: #f4e3e5;
+    }
+  }
+}
+
+.milesStatistics__periods,
+.carStatistics__periods {
+  margin-top: 24px;
+  margin-bottom: 14px;
+  input {
+    display: none;
+  }
+
+  .periods__day,
+  .periods__week,
+  .periods__mounth {
+    margin-left: 10px;
+    padding: 10px 12px;
+    border-radius: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 13px;
+    letter-spacing: 0%;
+    text-align: left;
+    transition: background-color 0.3s ease-in-out;
+    &:has(:checked) {
+      color: $white;
+      background-color: #2884ff;
+    }
+  }
+}
+
+#milesStatistics__graphic,
+#carStatistics__graphic {
+  max-height: 140px;
+}
